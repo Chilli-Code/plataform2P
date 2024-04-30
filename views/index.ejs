@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="kVK4n2UxORHkEt0uBIOV7HvBKH20dyDSZz6lkbSU90M" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <!-- Lottie.js -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/light.css">
+  <link rel="stylesheet" href="./css/Index.css">
+
+  <title>Home page</title>
+</head>
+
+
+<body>
+  <section class="main_container">
+    <div class="background">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+   </div>
+    <div class="initial-container">
+      <lottie-player src="./js/lottie/LottieInicio1.0.json" background="transparent" speed="1"
+        style="width: 450px; height: 200px;"  autoplay></lottie-player>
+    </div>
+    <div class="info-home">
+      <div class="title_container">
+        <div class="div">
+          <span class="span">J</span>
+          <span class="span">o</span>
+          <span class="span">v</span>
+          <span class="span">e</span>
+          <span class="span">n</span>
+          <span class="span">e</span>
+          <span class="span">s</span>
+          <br>
+          <span class="span" style="font-size: 30px;">I</span>
+          <span class="span" style="font-size: 30px;">P</span>
+          <span class="span" style="font-size: 30px;">D</span>
+          <span class="span" style="font-size: 30px;">C</span>
+
+        </div>
+
+
+        <!-- <h1>Jovenes</h1>
+        <span>IPDC</span> -->
+      </div>
+      <div class="icon_container">
+        <div class="man_container">
+          💪
+        <span class="btn">
+          <%= pMan %>
+        </span>
+      </div>
+      <div class="man_container woman_container">
+        🦋
+        <span class="btn">
+          <%= pWoman %>
+        </span>
+      </div>
+      </div>
+      <a class="buttonLogin" href="/auth" role="button">
+        <ion-icon size="large" name="log-in"></ion-icon>
+      <span style="margin-left: 2px;">Inicia Sesión</span>
+      </a>
+    </div>
+  </section>
+</body>
+<script type="text/javascript" src="./js/vanilla-tilt.js"></script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelector(".man_container"), {
+		max: 25,
+		speed: 400,
+		glare: true,
+    scale: 1.2,
+		"max-glare":0.2,	
+	});
+  VanillaTilt.init(document.querySelector(".woman_container"), {
+		max: 25,
+		speed: 400,
+    scale: 1.2,
+		glare: true,
+		"max-glare":0.2,	
+	});
+</script>
+</html>

@@ -1,0 +1,435 @@
+
+
+ion-icon {
+	--ionicon-stroke-width: 40px;
+}
+
+.cont-Tittle-Menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 30px 20px 4px 10px;
+}
+
+.cont-lottie {
+	margin-top: -37px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.titleP {
+	font-weight: bold;
+	color: var(--ColorSecond);
+}
+
+
+.tittleMain{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+}
+.shadow{
+	border-radius: 10px;
+	/* background:var(--colorThree) ; */
+	background: #363658;
+	box-shadow: var(--shadow-ring) !important;
+	border: 0px solid transparent;
+	color: var(--Text);
+}
+
+.shadow .userM{
+	color:var(--ColorSecond);
+	font-size: 1.2em;
+	font-weight:bold;
+	text-shadow: 0 0 20px var(--ColorSecond);
+}
+.navegation {
+	position: relative;
+	height: 400px;
+	width: auto;
+	box-shadow: 10px 0px var(--ColorSecond);
+	padding: 0.75rem 1.25rem;
+	overflow-x: hidden;
+	transition: width 0.5s;
+	margin-bottom: 1rem;
+	border-radius: 15px;
+	border-radius: 15px;
+	background: linear-gradient(315deg, #383c61ad, #2f3252);
+border-radius: 15px;
+background: linear-gradient(315deg, #383c61, #2f3252);
+box-shadow:var( --shadow-navigation);
+}
+
+.navegation ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: .75rem 1.25rem;
+}
+
+.navegation .list::before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -4px;
+	width: 59px;
+	height: 60px;
+	background: var(--ColorSecond);
+	border-radius: 28.5px;
+	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.25),
+	inset 2px 2px 1px rgba(255, 255, 255, 0.25),
+	inset -3px -1px 9px rgba(0, 0, 0, 0.5);
+	transition: 0.5s;
+}
+
+.navegation .list:hover::before {
+	width: 100%;
+
+}
+
+.navegation ul li {
+	margin-bottom: 15px;
+	transition: 0.5s;
+	position: relative;
+	list-style: none;
+	width: 100%;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+/* .navegation ul li:hover{
+    transition: 0.5s;
+	background: #4187f6;
+} */
+
+.navegation ul li a {
+	position: relative;
+	display: block;
+	width: 100%;
+	display: flex;
+	text-decoration: none;
+	color: var(--Text);
+}
+
+
+.navegation ul li a .icono {
+	position: relative;
+	display: block;
+	min-width: 60px;
+	height: 60px;
+	line-height: 70px;
+	text-align: center;
+
+}
+
+
+.navegation ul li a .icono ion-icon {
+	position: relative;
+	right: 4px;
+	bottom: 5px;
+	font-size: 1.5em;
+	z-index: 1;
+}
+
+.navegation ul li a .titulo {
+	position: relative;
+	display: block;
+	padding-left: 10px;
+	height: 60px;
+	line-height: 60px;
+	white-space: nowrap;
+}
+
+
+
+
+
+
+.logoutButton {
+	--figure-duration: 100ms;
+	--transform-figure: none;
+	--walking-duration: 100ms;
+	--transform-arm1: none;
+	--transform-wrist1: none;
+	--transform-arm2: none;
+	--transform-wrist2: none;
+	--transform-leg1: none;
+	--transform-calf1: none;
+	--transform-leg2: none;
+	--transform-calf2: none;
+	background: none;
+	border: 0;
+	color: #f4f7ff;
+	cursor: pointer;
+	display: block;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	height: 40px;
+	outline: none;
+	padding: 0 0 0 10px;
+	perspective: 100px;
+	position: relative;
+	text-align: left;
+	margin:14px -10px;
+	width: 130px;
+	z-index: 2;
+	-webkit-tap-highlight-color: transparent;
+}
+.logoutButton::before {
+	background-color: var(--ColorThree);
+	border-radius: 5px;
+	content: '';
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transform: none;
+	transition: transform 50ms ease;
+	width: 100%;
+	z-index: 2;
+}
+.logoutButton:hover .door {
+	transform: rotateY(20deg);
+}
+.logoutButton:active::before {
+	transform: scale(0.96);
+}
+.logoutButton:active .door {
+	transform: rotateY(28deg);
+}
+.logoutButton.clicked::before {
+	transform: none;
+}
+.logoutButton.clicked .door {
+	transform: rotateY(35deg);
+}
+.logoutButton.door-slammed .door {
+	transform: none;
+	transition: transform 100ms ease-in 250ms;
+}
+.logoutButton.falling {
+	animation: shake 200ms linear;
+}
+.logoutButton.falling .bang {
+	animation: flash 300ms linear;
+}
+.logoutButton.falling .figure {
+	animation: spin 1000ms infinite linear;
+	bottom: -1080px;
+	opacity: 0;
+	right: 1px;
+	transition: transform calc(var(--figure-duration) * 1ms) linear, bottom calc(var(--figure-duration) * 1ms) cubic-bezier(0.7, 0.1, 1, 1) 100ms, opacity calc(var(--figure-duration) * 0.25ms) linear calc(var(--figure-duration) * 0.75ms);
+	z-index: 1;
+}
+.logoutButton--light::before {
+	background-color: #f4f7ff;
+}
+.logoutButton--light .button-text {
+	color: #1f2335;
+}
+.logoutButton--light .door, .logoutButton--light .doorway {
+	fill: #1f2335;
+}
+.button-text {
+	top: 8px;
+	color: #f4f7ff;
+	font-weight: 500;
+	position: relative;
+	z-index: 10;
+}
+svg {
+	display: block;
+	position: absolute;
+}
+.figure {
+	bottom: 5px;
+	fill: var(--ColorSecond);
+	right: 18px;
+	transform: var(--transform-figure);
+	transition: transform calc(var(--figure-duration) * 1ms) cubic-bezier(0.2, 0.1, 0.8, 0.9);
+	width: 30px;
+	z-index: 4;
+}
+.door, .doorway {
+	bottom: 4px;
+	fill: #f4f7ff;
+	right: 12px;
+	width: 32px;
+}
+.door {
+	transform: rotateY(20deg);
+	transform-origin: 100% 50%;
+	transform-style: preserve-3d;
+	transition: transform 200ms ease;
+	z-index: 5;
+}
+.door path {
+	fill: var(--ColorSecond);
+	stroke: var(--ColorSecond);
+	stroke-width: 4;
+}
+.doorway {
+	z-index: 3;
+}
+.bang {
+	opacity: 0;
+}
+.arm1, .wrist1, .arm2, .wrist2, .leg1, .calf1, .leg2, .calf2 {
+	transition: transform calc(var(--walking-duration) * 1ms) ease-in-out;
+}
+.arm1 {
+	transform: var(--transform-arm1);
+	transform-origin: 52% 45%;
+}
+.wrist1 {
+	transform: var(--transform-wrist1);
+	transform-origin: 59% 55%;
+}
+.arm2 {
+	transform: var(--transform-arm2);
+	transform-origin: 47% 43%;
+}
+.wrist2 {
+	transform: var(--transform-wrist2);
+	transform-origin: 35% 47%;
+}
+.leg1 {
+	transform: var(--transform-leg1);
+	transform-origin: 47% 64.5%;
+}
+.calf1 {
+	transform: var(--transform-calf1);
+	transform-origin: 55.5% 71.5%;
+}
+.leg2 {
+	transform: var(--transform-leg2);
+	transform-origin: 43% 63%;
+}
+.calf2 {
+	transform: var(--transform-calf2);
+	transform-origin: 41.5% 73%;
+}
+@keyframes spin {
+	from {
+		transform: rotate(0deg) scale(0.94);
+   }
+	to {
+		transform: rotate(359deg) scale(0.94);
+   }
+}
+@keyframes shake {
+	0% {
+		transform: rotate(-1deg);
+   }
+	50% {
+		transform: rotate(2deg);
+   }
+	100% {
+		transform: rotate(-1deg);
+   }
+}
+@keyframes flash {
+	0% {
+		opacity: 0.4;
+   }
+	100% {
+		opacity: 0;
+   }
+}
+
+.copiyray {
+    position: relative;
+    text-align: center;
+    color: #8a2435;
+}
+
+
+
+.messageContainer{
+	position: fixed;
+	width: 0px;
+	height: 0px;
+	background: #37444b;
+	border-radius: 25px;
+	transition: 0.5s;
+	right: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.messageContainer .message{
+	min-width: 400px;
+	padding: 40px;
+	color: #fff;
+	opacity: 0;
+	transition: 0.5s;
+	transform: scale(0);
+}
+
+.messageContainer.active .message{
+	opacity: 1;
+	transition-delay: 0.5s;
+	transform: scale(1);
+}
+
+.messageContainer.active{
+	width: 400px;
+	height: 400px;
+	transition-delay: 0.5s;
+}
+
+.messageContainer::before{
+	content: '';
+	position: absolute;
+	bottom: -15px;
+	width: 40px;
+	height: 40px;
+	background: #37444b;
+	opacity: 0;
+	border-radius: 5px;
+	transition: 0.5s;
+	transform: rotate(45deg);
+}
+
+.messageContainer.active::before{
+	opacity: 1;
+	transition-delay: 0.5s;
+}
+
+.toggleBtn {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    /* bottom: -20px; */
+    min-width: 60px;
+    height: 60px;
+    background: #0bcf9c;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.toggleBtn::before{
+
+	content: '+';
+	font-size: 2.5em;
+	color: #fff;
+
+}
+
+.messageContainer.active .toggleBtn{
+	bottom: -90px;
+	transform: rotate(135deg);
+	background: #ff5a57;
+}

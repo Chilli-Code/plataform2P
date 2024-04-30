@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="kVK4n2UxORHkEt0uBIOV7HvBKH20dyDSZz6lkbSU90M" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- LottiJS -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/datos.css">
+    <link rel="stylesheet" href="../css/light.css">
+    <title>Bienvenido</title>
+</head>
+
+<body>
+    <% if(id){ %>
+        <div class="container fade">
+            <div class="bac">
+                <a href="/dashboard?id=<%= id %>" class="btn btn-dark"><ion-icon
+                        name="arrow-back-circle"></ion-icon></a>
+            </div>
+            <div class="cont-Tittle-Menu">
+                <h1 class="display-4 titleP">Perfil</h1>
+            </div class="cont-Tittle-Menu">
+            <br><br>
+
+            <div class="alert alert-dark tittleMain shadow">
+                <span><span class="material-symbols-outlined">
+                    <%= sexo %>
+                    </span></ion-icon></span>
+           
+            </div class="alert alert-dark tittleMain shadow">
+
+            <div class="navegation">
+                <ul>
+                    <li class="list" style="margin-top: 20px;">
+                        <a>
+                            <span class="icono">
+                                <ion-icon name="key-outline"></ion-icon>
+                            </span>
+                            <span class="titulo" style="margin-right: 20px;">
+                                <b>ID de usuario:</b>
+                            </span>
+                            <span class="titulo" style="margin-left: 2px;">
+                                <%= id %>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a>
+                            <span class="icono">
+                                <ion-icon name="accessibility-outline"></ion-icon>
+                            </span>
+                            <span class="titulo" style="margin-right: 0px;">
+                                <b>Nombre:</b>
+                            </span>
+                            <span class="titulo" style="margin-left: 2px;">
+                                <%= usuario %>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a>
+                            <span class="icono">
+                                <ion-icon name="call-outline"></ion-icon>
+                            </span>
+                            <span class="titulo" style="margin-right: 0px;">
+                                <b>Telefono:</b>
+                            </span>
+                            <span class="titulo" style="margin-left: 2px;">
+                                +57 <%= phone %>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a>
+                            <span class="icono">
+                                <ion-icon name="star-outline"></ion-icon>
+                            </span>
+                            <span class="titulo" style="margin-right: 0px;">
+                                <b>Rango:</b>
+                            </span>
+                            <span class="titulo" style="margin-left: 2px;">
+                                <%= rango %>
+                            </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="alert alert-dark tittleMain shadow" style="box-shadow: var(--shadow-navigation) !important;" role="alert">
+                <form
+                    action="/dashboard/datos?id=<%= id %>&usuario=<%= usuario %>&phone=<%= phone %>&rango=<%= rango %>"
+                    method="POST">
+                    <label><b>Codigo:</b></label>
+                    <input type="number" class="form-control" name="code" id="code">
+                    <% if(msg=="codigoincorrecto" ) { %>
+                        <div class="alert alert-danger" role="alert">
+                            <strong class="text-black-50">El codigo no existe o ya fue utilizado</strong>
+                        </div>
+                        <% } %>
+                            <br>
+                            <button type="submit" class="btn btn-dark" style="background: var(--ColorSecond);">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <% } else {%>
+            <h1>ha ocurrido un error con la sessión</h1>
+            <a href="/auth">Volver a iniciar sesion</a>
+            <% } %>
+
+
+                <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

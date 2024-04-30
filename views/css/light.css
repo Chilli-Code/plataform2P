@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.bac {
+	display: flex !important;
+	align-items: center;
+}
+
+/* Define la animación */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		/* Elemento invisible al principio */
+		transform: translateX(-100px);
+		/* Puede ajustarse según la dirección deseada */
+	}
+
+	to {
+		opacity: 1;
+		/* Elemento completamente visible al final */
+		transform: translateX(0);
+		/* Sin transformación al final */
+	}
+}
+
+/* Aplica la animación al elemento */
+.fade {
+	animation: fadeIn 0.3s ease-out forwards;
+	/* Nombre de la animación, duración, y función de temporización */
+}
+.fade{
+	background: var(--Background);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--Background) !important; /* Fondo blanco */
+    }
+  }
+
+
+  body{
+    background: var(--Background) !important;
+  }
+
+  :root{
+
+    /* Colors */
+    --Background: #1F2440;
+    --ColorMainContainer: #34385B;
+    --ColorSecond: #1f83f2;
+    /* --colorThree: #1f2335; */
+    --ColorThree: #181c2a;
+    --Text: #fff;
+    --AnimationOne:#6c5ce7;
+    --AnimationTwo: #587be4;
+    --Background-navigation: linear-gradient(315deg, #383c61, #2f3252);
+
+
+  /* Shadow */
+   --shadow-ring:4px -3px 8px rgba(0, 0, 0, 0.25), inset 0px 3px 5px rgba(255, 255, 255, 0.25), inset -3px 0px 3px rgba(0, 0, 0, 0.5);
+  --shadow-box:5px 5px 30px rgba(0,0,0,0.2);
+  --shadow-navigation:3px -4px 0px #33375a, 4px 4px 1px #35395c;
+  }
+    /*Main Title */
+
+    .cont-Tittle-Menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 20px 4px 10px;
+  }
+  .cont-Tittle-Menu .titleP {
+    font-weight: bold;
+    color: var(--ColorSecond);
+  }
+  
+  
+  /* Menu Box*/
+  .shadow {
+    border-radius: 10px;
+    /* background: var(--colorThree); */
+    background: #363658;
+    box-shadow: var(--shadow-ring) !important;
+    border: 0px solid transparent;
+    color: var(--Text);
+  }
+  
+  .tittleMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }

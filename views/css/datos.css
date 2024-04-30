@@ -1,0 +1,130 @@
+body{
+    background: var(--Background) !important;
+    overflow-x: hidden;
+}
+
+
+ion-icon {
+	--ionicon-stroke-width: 40px;
+    font-size: 34px;
+}
+
+
+.bac a{
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: var(--ColorThree);
+    height: 40px;
+    width: 50px;
+    margin: 14px -10px;
+    padding: 0 0 0 10px;
+    z-index: 2;
+    color: #f4f7ff;
+}
+
+.bac ion-icon{
+    fill:var(--ColorSecond);
+}
+
+.tittleMain ion-icon{
+    font-size: 40px;
+
+}
+
+
+.navegation {
+	position: relative;
+	height: 400px;
+	width: auto;
+	box-shadow: 10px 0px var(--ColorSecond);
+	padding: 0.75rem 1.25rem;
+	overflow-x: hidden;
+	transition: width 0.5s;
+	margin-bottom: 1rem;
+	border-radius: 15px;
+	border-radius: 15px;
+	background: linear-gradient(315deg, #383c61ad, #2f3252);
+	border-radius: 15px;
+	background: linear-gradient(315deg, #383c61, #2f3252);
+	box-shadow:var(--shadow-navigation); 	
+}
+
+.navegation ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: .75rem 1.25rem;
+}
+
+.navegation .list::before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -4px;
+	width: 59px;
+	height: 60px;
+	background: var(--ColorSecond);
+	border-radius: 28.5px;
+	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.25),
+	inset 2px 2px 1px rgba(255, 255, 255, 0.25),
+	inset -3px -1px 9px rgba(0, 0, 0, 0.5);
+	transition: 0.5s;
+}
+
+.navegation ul li {
+	margin-bottom: 15px;
+	transition: 0.5s;
+	position: relative;
+	list-style: none;
+	width: 100%;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+/* .navegation ul li:hover{
+    transition: 0.5s;
+	background: #4187f6;
+} */
+
+.navegation ul li a {
+	position: relative;
+	display: block;
+	width: 100%;
+	display: flex;
+	text-decoration: none;
+	color: var(--Text) !important;
+    justify-content: flex-start;
+}
+
+
+.navegation ul li a .icono {
+	position: relative;
+	display: block;
+	min-width: 60px;
+	height: 60px;
+	line-height: 70px;
+	text-align: center;
+
+}
+
+
+.navegation ul li a .icono ion-icon {
+	position: relative;
+	right: 4px;
+	bottom: 5px;
+	font-size: 1.5em;
+	z-index: 1;
+}
+
+.navegation ul li a .titulo {
+	position: relative;
+	display: block;
+	padding-left: 10px;
+	height: 60px;
+	line-height: 60px;
+	white-space: nowrap;
+}
+
