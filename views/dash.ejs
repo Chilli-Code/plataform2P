@@ -189,13 +189,37 @@
                       </div>
                     </div> -->
                     <!-- <p class="copiyray">Copyright © 2024 Keku Enterprise. All Right Reserverd</p> -->
-                    <div class="messageContainer">
+                    <!-- <div class="messageContainer">
                         <div class="message">
                             <h2>Informacion.....</h2>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores est nulla, eveniet, optio at provident neque corporis, in deleniti sequi iure ipsam maiores placeat modi voluptatibus sed architecto, dignissimos molestiae?</p>
                         </div>
                         <div class="toggleBtn"></div>
+                    </div> -->
+                    <div class="messageContainer">
+                    <a  href="#openModal" class="MessageP BottonFB " style="position: relative;">
+                    <lottie-player src="./js/lottie/PandaDf.json" background="rgba(255, 255, 255, 0)" speed="1"
+                    style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+                </a>
+                </div>
+
+                <!-- <a href="#openModal"><button class="BottonFB"><ion-icon name="logo-facebook" class="iconoRd"></ion-icon>Iniciar sesión Con Facebook</button></a> -->
+
+
+                <div id="openModal" class="modalDialog">
+                    <div class="contenedorW">
+                        <a href="#" title="Close" class="close">X</a>
+                        <div class="contenedor-perfil">
+                            <h1>Versiculo1.0</h1>
+                            <p class="conectar-friends">Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida</p>
+                            <span class="logo">
+                                <img src="./img/PandaMessageL.svg" alt="facebook" id="animation">
+                            </span>
+                        </div>
+        
                     </div>
+        
+                </div>
                 <% } %>
                     <% } else {%>
                         <h1>Error al iniciar sesion</h1>
@@ -206,15 +230,39 @@
                                 src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
                             <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let BottonFB = document.querySelector('.BottonFB');
+        let modalDialog = document.querySelector('.modalDialog');
+        let contenedor = document.querySelector('.contenedorW');
+        let close = document.querySelector('.close');
 
-<script type="text/javascript">
-	let toggleBtn = document.querySelector('.toggleBtn');
-	let contenedor = document.querySelector('.messageContainer');
+        if (BottonFB && modalDialog && contenedor && close) {
+            BottonFB.onclick = function() {
+                modalDialog.classList.add('active');
+                contenedor.classList.add('active');
+            }
 
-	toggleBtn.onclick = function(){
-		contenedor.classList.toggle('active');
-	}
-
+            close.onclick = function() {
+                modalDialog.classList.remove('active');
+                contenedor.classList.remove('active');
+            }
+        }
+    });
 </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const messageContainer = document.querySelector('.messageContainer');
+        if (messageContainer) {
+            setTimeout(() => {
+                messageContainer.classList.add('active');
+            }, 500); // Ajusta el tiempo de espera según tu preferencia
+        }
+    });
+</script>
+
+
+
 <script src="./js/LogOut.js"></script>
 </html>

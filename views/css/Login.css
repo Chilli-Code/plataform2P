@@ -463,7 +463,7 @@ svg {
   }
   
 
-  .btn {
+  .btnM {
     margin-top: 30px;
     padding: 15px 30px;
     font-size: 14px;
@@ -476,7 +476,7 @@ svg {
     color: var(--Text);
     box-shadow: 0 0 10px #363636, inset 0 0 10px #363636;
 }
-  .btn:hover {
+  .btnM:hover {
     animation: a 0.5s 1 linear;
   }
   @keyframes a {
@@ -557,7 +557,7 @@ svg {
     bottom: 380px;
     z-index: 200;
     padding: 30px 25px;
-    background: var(--Text);
+    background: var(--ColorThree);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
     opacity: 1;
@@ -573,7 +573,7 @@ svg {
     position: absolute;
     width: 25px;
     height: 25px;
-    background: var(--Text);
+    background: var(--ColorThree);
     left: 91px;
     bottom: -60px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
